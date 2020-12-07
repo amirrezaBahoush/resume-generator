@@ -20,6 +20,13 @@
   max-height: 90vh;
   min-width: 85vw;
   text-align: center;
-  padding-top: 80px;
   height: 100%;
+}
+.basic{
+  &__card {
+    box-shadow: 1px 2px 6px rgb(158, 158, 158);
+  }
+}
+.mt-5{
+  margin-top: 15px;
 }

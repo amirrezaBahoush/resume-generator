@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { Col, Row, Typography, Steps, Button, message } from 'antd';
+import { Col, Row, Typography, Steps, Button, message, Form } from 'antd';
 import Basic from './components/Basic';
 
 const { Title } = Typography;
@@ -24,23 +24,23 @@ function App() {
 
   const steps = [
     {
-      title: 'First',
+      title: 'مرحله ی اول',
       content: <Basic />,
     },
     {
-      title: 'Second',
+      title: 'مرحله ی دوم',
       content: 'Second-content',
     },
     {
-      title: 'Third',
+      title: 'مرحله ی سوم',
       content: 'Second-content',
     },
     {
-      title: 'Fourth',
+      title: 'مرحله ی چهارم',
       content: 'Second-content',
     },
     {
-      title: 'Last',
+      title: 'مرحله نهایی',
       content: 'Last-content',
     },
   ];
@@ -58,7 +58,14 @@ function App() {
               <Step key={item.title} title={item.title} />
             ))}
           </Steps>
-          <div className="steps-content">{steps[current].content}</div>
+          <Form
+            // form={form}
+            name="advanced_search"
+            className="ant-advanced-search-form"
+          // onFinish={onFinish}
+          >
+            <div className="steps-content">{steps[current].content}</div>
+          </Form>
         </Col>
       </Row>
       <Row justify="center">

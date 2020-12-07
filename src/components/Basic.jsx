@@ -1,34 +1,30 @@
-import { Col, Input, Row, Form } from 'antd';
+import { Col, Input, Row, Form, Card } from 'antd';
 import React from 'react';
 
 
 const Basic = () => {
   return (
-    <Form
-      // form={form}
-      name="advanced_search"
-      className="ant-advanced-search-form"
-    // onFinish={onFinish}
-    >
-      <Row gutter={16}>
+
+    <Card title="اطلاعات شخصی" className="basic__card">
+      <Row gutter={24}>
         <Col span={8}>
           <Form.Item
             name='firstName'
-            label='First Name'
+            label='نام'
             rules={[
               {
                 required: true,
                 message: 'Please Fill The Input',
-              },
+              }
             ]}
           >
-            <Input placeholder="placeholder" />
+            <Input placeholder="نام" />
           </Form.Item>
         </Col>
         <Col span={8}>
           <Form.Item
             name={`field`}
-            label={`Field`}
+            label="نام خانوادگی"
             rules={[
               {
                 required: true,
@@ -36,13 +32,13 @@ const Basic = () => {
               },
             ]}
           >
-            <Input placeholder="placeholder" />
+            <Input placeholder="نام خانوادگی" />
           </Form.Item>
         </Col>
         <Col span={8}>
           <Form.Item
             name={`field`}
-            label={`Field`}
+            label="محل سکونت"
             rules={[
               {
                 required: true,
@@ -50,12 +46,130 @@ const Basic = () => {
               },
             ]}
           >
-            <Input placeholder="placeholder" />
+            <Input placeholder="محل سکونت" />
           </Form.Item>
         </Col>
       </Row>
+      <Row gutter={24} className="mt-5">
+        <Col span={8}>
+          <Form.Item
+            name={`field`}
+            label="محل تولد"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="محل تولد" />
+          </Form.Item>
+        </Col>
+        <Col span={8}>
+          <Form.Item
+            name={`field`}
+            label="سال تولد"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="سال تولد" />
+          </Form.Item>
+        </Col>
+        <Col span={8}>
+          <Form.Item
+            name="field"
+            label="ایمیل"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="ایمیل" />
+          </Form.Item>
+        </Col>
+      </Row>
+      <Row gutter={24} className="mt-5">
+        <Col span={8}>
+          <Form.Item
+            name="field"
+            label="تلفن محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="تلفن محل سکونت" />
+          </Form.Item>
+        </Col>
+        <Col span={16}>
+          <Form.Item
+            name="field"
+            label="آدرس محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="آدرس محل سکونت" />
+          </Form.Item>
+        </Col>
+      </Row>
+      <Row gutter={24} className="mt-5">
+        <Col span={8}>
+          <Form.Item
+            name="field"
+            label="شماره همراه"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="شماره همراه" />
+          </Form.Item>
+        </Col>
+        <Col span={8}>
+          <Form.Item
+            name="field"
+            label="وبسایت شخصی"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="وبسایت شخصی" />
+          </Form.Item>
+        </Col>
+        <Col span={8}>
+          <Form.Item
+            name="field"
+            label="ایمیل"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="ایمیل" />
+          </Form.Item>
+        </Col>
+      </Row>
+    </Card>
 
-    </Form>
   )
 }
 
