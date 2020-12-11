@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './App.scss';
 import { Col, Row, Typography, Steps, Button, message, Form } from 'antd';
 import Basic from './components/Basic';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import Skills from './components/Skills';
 
 const { Title } = Typography;
 const { Step } = Steps;
@@ -29,15 +32,15 @@ function App() {
     },
     {
       title: 'مرحله ی دوم',
-      content: 'Second-content',
+      // content: <Experience />,
     },
     {
       title: 'مرحله ی سوم',
-      content: 'Second-content',
+      // content: <Education />,
     },
     {
       title: 'مرحله ی چهارم',
-      content: 'Second-content',
+      // content: <Skills />,
     },
     {
       title: 'مرحله نهایی',
@@ -78,7 +81,7 @@ function App() {
             )}
             {current === steps.length - 1 && (
               <Button type="primary" onClick={() => message.success('Processing complete!')}>
-                Done
+                Generate PDF
               </Button>
             )}
             {current > 0 && (

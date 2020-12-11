@@ -37,8 +37,8 @@ const Basic = () => {
         </Col>
         <Col span={8}>
           <Form.Item
-            name={`field`}
-            label="محل سکونت"
+            name="field"
+            label="ایمیل"
             rules={[
               {
                 required: true,
@@ -46,7 +46,68 @@ const Basic = () => {
               },
             ]}
           >
-            <Input placeholder="محل سکونت" />
+            <Input placeholder="ایمیل" />
+          </Form.Item>
+        </Col>
+      </Row>
+      <Row gutter={24} className="mt-5">
+        <Col span={8}>
+          <Form.Item
+            name={`field`}
+            label="استان محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="استان محل سکونت" />
+          </Form.Item>
+        </Col>
+        <Col span={8}>
+          <Form.Item
+            name={`field`}
+            label="شهر محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="شهر محل سکونت" />
+          </Form.Item>
+        </Col>
+        <Col span={8}>
+          <Form.Item
+            name="field"
+            label="تلفن محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="تلفن محل سکونت" />
+          </Form.Item>
+        </Col>
+
+      </Row>
+      <Row gutter={24} className="mt-5">
+        <Col span={24}>
+          <Form.Item
+            name="field"
+            label="آدرس محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'Input something!',
+              },
+            ]}
+          >
+            <Input placeholder="آدرس محل سکونت" />
           </Form.Item>
         </Col>
       </Row>
@@ -82,52 +143,6 @@ const Basic = () => {
         <Col span={8}>
           <Form.Item
             name="field"
-            label="ایمیل"
-            rules={[
-              {
-                required: true,
-                message: 'Input something!',
-              },
-            ]}
-          >
-            <Input placeholder="ایمیل" />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={24} className="mt-5">
-        <Col span={8}>
-          <Form.Item
-            name="field"
-            label="تلفن محل سکونت"
-            rules={[
-              {
-                required: true,
-                message: 'Input something!',
-              },
-            ]}
-          >
-            <Input placeholder="تلفن محل سکونت" />
-          </Form.Item>
-        </Col>
-        <Col span={16}>
-          <Form.Item
-            name="field"
-            label="آدرس محل سکونت"
-            rules={[
-              {
-                required: true,
-                message: 'Input something!',
-              },
-            ]}
-          >
-            <Input placeholder="آدرس محل سکونت" />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={24} className="mt-5">
-        <Col span={8}>
-          <Form.Item
-            name="field"
             label="شماره همراه"
             rules={[
               {
@@ -139,7 +154,10 @@ const Basic = () => {
             <Input placeholder="شماره همراه" />
           </Form.Item>
         </Col>
-        <Col span={8}>
+      </Row>
+      <Row gutter={24} className="mt-5">
+
+        {/* <Col span={8}>
           <Form.Item
             name="field"
             label="وبسایت شخصی"
@@ -152,8 +170,8 @@ const Basic = () => {
           >
             <Input placeholder="وبسایت شخصی" />
           </Form.Item>
-        </Col>
-        <Col span={8}>
+        </Col> */}
+        {/* <Col span={8}>
           <Form.Item
             name="field"
             label="ایمیل"
@@ -166,7 +184,7 @@ const Basic = () => {
           >
             <Input placeholder="ایمیل" />
           </Form.Item>
-        </Col>
+        </Col> */}
       </Row>
     </Card>
 
