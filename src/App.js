@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.scss';
 import { Col, Row, Typography, Steps, Button, message, Form } from 'antd';
-import Basic from './components/Basic';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Skills from './components/Skills';
+import Basic from './screens/Basic';
+import Experience from './screens/Experience';
+import Education from './screens/Education';
+import Skills from './screens/Skills';
 
 const { Title } = Typography;
 const { Step } = Steps;
@@ -32,20 +32,20 @@ function App() {
     },
     {
       title: 'مرحله ی دوم',
-      // content: <Experience />,
+      content: <Experience />,
     },
     {
       title: 'مرحله ی سوم',
-      // content: <Education />,
+      content: <Education />,
     },
     {
-      title: 'مرحله ی چهارم',
-      // content: <Skills />,
+      title: 'مرحله ی نهایی',
+      content: <Skills />,
     },
-    {
-      title: 'مرحله نهایی',
-      content: 'Last-content',
-    },
+    // {
+    //   title: 'مرحله نهایی',
+    //   content: 'Last-content',
+    // },
   ];
   return (
     <div className="resume__wrapper">
@@ -76,17 +76,17 @@ function App() {
           <div className="steps-action">
             {current < steps.length - 1 && (
               <Button type="primary" onClick={() => next()}>
-                Next
+                بعدی
               </Button>
             )}
             {current === steps.length - 1 && (
               <Button type="primary" onClick={() => message.success('Processing complete!')}>
-                Generate PDF
+                خروجی PDF
               </Button>
             )}
             {current > 0 && (
               <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
-                Previous
+                قبلی
               </Button>
             )}
           </div>

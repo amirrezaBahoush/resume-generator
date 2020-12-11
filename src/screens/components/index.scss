@@ -1,0 +1,29 @@
+
+.addBox-wrapper{
+  &__title {
+    color: #f47c23;
+  }
+  &__box {
+    border: 1px dashed #ccc;
+    border-radius: 20px;
+    padding: 40px;
+  }
+  &__upload {
+    color: #ccc;
+  }
+  &__icon {
+    color: rgb(105, 105, 105);
+    font-size: 25px;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    z-index: 100;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__minus {
+    left: unset;
+    right: 0px;
+  }
+}

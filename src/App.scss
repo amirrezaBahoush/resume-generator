@@ -1,8 +1,15 @@
 .resume {
+  &__wrapper {
+  background-color: #500000;
+  height: 100vh;
+  }
   &__titleWrapper {
     display: flex !important;
     justify-content: center;
     padding: 10px;
+    & *{
+      color: #fff !important;
+    }
   }
   &__steps {
     display: flex;
@@ -33,4 +40,7 @@
 }
 .mt-5{
   margin-top: 25px;
+}
+ .ant-steps-item-title {
+  color: #fff !important;
 }
