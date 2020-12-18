@@ -44,7 +44,7 @@ const Add = (props) => {
           <Row gutter={24} className="mt-5">
             <Col span={8}>
               <Form.Item
-                name={`field`}
+                name={`offceName-${number}`}
                 label="نام اداره"
                 rules={[
                   {
@@ -58,7 +58,7 @@ const Add = (props) => {
             </Col>
             <Col span={8}>
               <Form.Item
-                name={`field`}
+                name={`workLength-${number}`}
                 label="مدت حضور"
                 rules={[
                   {
@@ -72,7 +72,7 @@ const Add = (props) => {
             </Col>
             <Col span={8}>
               <Form.Item
-                name="field"
+                name={`position-${number}`}
                 label="سمت شغلی"
                 rules={[
                   {

@@ -44,8 +44,8 @@ const AddEducation = (props) => {
           <Row gutter={24} className="mt-5">
             <Col span={8}>
               <Form.Item
-                name={`field`}
-                label="محل تحصیل"
+                name={`educationPlace-${number}`}
+                label='محل تحصیل'
                 rules={[
                   {
                     required: true,
@@ -58,7 +58,7 @@ const AddEducation = (props) => {
             </Col>
             <Col span={8}>
               <Form.Item
-                name={`field`}
+                label={`rank-${number}`}
                 label="مقطع تحصیلی"
                 rules={[
                   {
@@ -72,7 +72,7 @@ const AddEducation = (props) => {
             </Col>
             <Col span={8}>
               <Form.Item
-                name="field"
+                label={`educationLength-${number}`}
                 label="مدت تحصیل"
                 rules={[
                   {

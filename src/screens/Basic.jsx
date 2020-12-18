@@ -23,12 +23,12 @@ const Basic = () => {
         </Col>
         <Col span={12}>
           <Form.Item
-            name={`field`}
+            name='lastName'
             label="نام خانوادگی"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -39,12 +39,12 @@ const Basic = () => {
       <Row gutter={24} className="mt-5">
         <Col span={12}>
           <Form.Item
-            name={`field`}
+            name='province'
             label="استان محل سکونت"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -53,12 +53,12 @@ const Basic = () => {
         </Col>
         <Col span={12}>
           <Form.Item
-            name={`field`}
+            name='city'
             label="شهر محل سکونت"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -69,12 +69,12 @@ const Basic = () => {
       <Row gutter={24} className="mt-5">
         <Col span={12}>
           <Form.Item
-            name="field"
+            name='email'
             label="ایمیل"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -83,12 +83,12 @@ const Basic = () => {
         </Col>
         <Col span={12}>
           <Form.Item
-            name="field"
+            name='phoneNumber'
             label="تلفن محل سکونت"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -99,12 +99,12 @@ const Basic = () => {
       <Row gutter={24} className="mt-5">
         <Col span={12}>
           <Form.Item
-            name={`field`}
+            name='birthPlace'
             label="محل تولد"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -113,12 +113,12 @@ const Basic = () => {
         </Col>
         <Col span={12}>
           <Form.Item
-            name={`field`}
+            name='birthYear'
             label="سال تولد"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -129,12 +129,12 @@ const Basic = () => {
       <Row gutter={24} className="mt-5">
         <Col span={12}>
           <Form.Item
-            name="field"
+            name='mobile'
             label="شماره همراه"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >
@@ -143,14 +143,8 @@ const Basic = () => {
         </Col>
         <Col span={12}>
           <Form.Item
-            name="field"
+            name='website'
             label="وبسایت شخصی"
-            rules={[
-              {
-                required: true,
-                message: 'Input something!',
-              },
-            ]}
           >
             <Input placeholder="وبسایت شخصی" />
           </Form.Item>
@@ -159,12 +153,12 @@ const Basic = () => {
       <Row gutter={24} className="mt-5">
         <Col span={24}>
           <Form.Item
-            name="field"
+            name='address'
             label="آدرس محل سکونت"
             rules={[
               {
                 required: true,
-                message: 'Input something!',
+                message: 'فیلد اجباری می باشد',
               },
             ]}
           >

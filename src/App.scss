@@ -1,3 +1,25 @@
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 500;
+	src: url('./assets/fonts/eot/IRANSansWeb_Medium.eot');
+	src: url('./assets/fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('./assets/fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('./assets/fonts/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('./assets/fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+* {
+  font-family: 'IRANSans', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #500000 !important;
+}
+
 .resume {
   &__wrapper {
   background-color: #500000;
@@ -6,7 +28,9 @@
   &__titleWrapper {
     display: flex !important;
     justify-content: center;
-    padding: 10px;
+    align-items: center;
+    // padding: 20px;
+    margin-top: 25px;
     & *{
       color: #fff !important;
     }
@@ -15,6 +39,15 @@
     display: flex;
     justify-content: space-between;
     padding: 25px;
+  }
+  &__btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    right: 25px;
+    z-index: 999;
   }
 }
 .steps-content {

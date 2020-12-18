@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Form, Row, Col, Input, Button } from "antd";
+import { Form, Row, Col, Input, Button, Select } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import './index.scss'
+
+const { Option } = Select;
 
 const AddSkills = (props) => {
   const [rowsArray, setRowsArray] = useState([]);
@@ -44,12 +46,12 @@ const AddSkills = (props) => {
           <Row gutter={24} className="mt-5">
             <Col span={12}>
               <Form.Item
-                name={`field`}
+                label={`skillName-${number}`}
                 label="نام مهارت"
                 rules={[
                   {
                     required: true,
-                    message: 'Input something!',
+                    message: 'فیلد اجباری می باشد',
                   },
                 ]}
               >
@@ -58,16 +60,22 @@ const AddSkills = (props) => {
             </Col>
             <Col span={12}>
               <Form.Item
-                name={`field`}
+                label={`skillLevel-${number}`}
                 label="سطح"
                 rules={[
                   {
                     required: true,
-                    message: 'Input something!',
+                    message: 'فیلد اجباری می باشد',
                   },
                 ]}
               >
-                <Input placeholder="سطح" />
+                <Select defaultValue="beginner" >
+                  <Option value="beginner">مبتدی</Option>
+                  <Option value="intermediate">متوسط</Option>
+                  <Option value="advanced">
+                    پیشرفته
+                  </Option>
+ز                </Select>
               </Form.Item>
             </Col>
           </Row>

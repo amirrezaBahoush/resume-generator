@@ -71,7 +71,7 @@ function App() {
           </Form>
         </Col>
       </Row>
-      <Row justify="center">
+      <Row justify="center" className="resume__btnWrapper">
         <Col>
           <div className="steps-action">
             {current < steps.length - 1 && (
