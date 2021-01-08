@@ -7,21 +7,21 @@ const Basic = () => {
 
     <Card title="اطلاعات شخصی" className="basic__card">
       <Row gutter={24}>
-        <Col span={12}>
+        <Col xs={24} lg={6}>
           <Form.Item
             name='firstName'
             label='نام'
             rules={[
               {
                 required: true,
-                message: 'Please Fill The Input',
+                message: 'فیلد اجباری می باشد',
               }
             ]}
           >
             <Input placeholder="نام" />
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={24} lg={6}>
           <Form.Item
             name='lastName'
             label="نام خانوادگی"
@@ -35,69 +35,7 @@ const Basic = () => {
             <Input placeholder="نام خانوادگی" />
           </Form.Item>
         </Col>
-      </Row>
-      <Row gutter={24} className="mt-5">
-        <Col span={12}>
-          <Form.Item
-            name='province'
-            label="استان محل سکونت"
-            rules={[
-              {
-                required: true,
-                message: 'فیلد اجباری می باشد',
-              },
-            ]}
-          >
-            <Input placeholder="استان محل سکونت" />
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            name='city'
-            label="شهر محل سکونت"
-            rules={[
-              {
-                required: true,
-                message: 'فیلد اجباری می باشد',
-              },
-            ]}
-          >
-            <Input placeholder="شهر محل سکونت" />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={24} className="mt-5">
-        <Col span={12}>
-          <Form.Item
-            name='email'
-            label="ایمیل"
-            rules={[
-              {
-                required: true,
-                message: 'فیلد اجباری می باشد',
-              },
-            ]}
-          >
-            <Input placeholder="ایمیل" />
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            name='phoneNumber'
-            label="تلفن محل سکونت"
-            rules={[
-              {
-                required: true,
-                message: 'فیلد اجباری می باشد',
-              },
-            ]}
-          >
-            <Input placeholder="تلفن محل سکونت" />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={24} className="mt-5">
-        <Col span={12}>
+        <Col xs={24} lg={6}>
           <Form.Item
             name='birthPlace'
             label="محل تولد"
@@ -111,7 +49,7 @@ const Basic = () => {
             <Input placeholder="محل تولد" />
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={24} lg={6}>
           <Form.Item
             name='birthYear'
             label="سال تولد"
@@ -127,7 +65,21 @@ const Basic = () => {
         </Col>
       </Row>
       <Row gutter={24} className="mt-5">
-        <Col span={12}>
+        <Col xs={24} lg={8}>
+          <Form.Item
+            name='email'
+            label="ایمیل"
+            rules={[
+              {
+                required: true,
+                message: 'فیلد اجباری می باشد',
+              },
+            ]}
+          >
+            <Input placeholder="ایمیل" />
+          </Form.Item>
+        </Col>
+        <Col xs={24} lg={8}>
           <Form.Item
             name='mobile'
             label="شماره همراه"
@@ -141,7 +93,7 @@ const Basic = () => {
             <Input placeholder="شماره همراه" />
           </Form.Item>
         </Col>
-        <Col span={12}>
+        <Col xs={24} lg={8}>
           <Form.Item
             name='website'
             label="وبسایت شخصی"
@@ -151,10 +103,10 @@ const Basic = () => {
         </Col>
       </Row>
       <Row gutter={24} className="mt-5">
-        <Col span={24}>
+        <Col xs={24} lg={8}>
           <Form.Item
-            name='address'
-            label="آدرس محل سکونت"
+            name='phoneNumber'
+            label="تلفن محل سکونت"
             rules={[
               {
                 required: true,
@@ -162,7 +114,39 @@ const Basic = () => {
               },
             ]}
           >
-            <Input placeholder="آدرس محل سکونت" />
+            <Input placeholder="تلفن محل سکونت" />
+          </Form.Item>
+        </Col>
+        <Col xs={24} lg={8}>
+          <Form.Item
+            name='province'
+            label="استان محل سکونت"
+          >
+            <Input placeholder="استان محل سکونت" />
+          </Form.Item>
+        </Col>
+        <Col xs={24} lg={8}>
+          <Form.Item
+            name='city'
+            label="شهر محل سکونت"
+            rules={[
+              {
+                required: true,
+                message: 'فیلد اجباری می باشد',
+              },
+            ]}
+          >
+            <Input placeholder="شهر محل سکونت" />
+          </Form.Item>
+        </Col>
+      </Row>
+      <Row gutter={24} className="mt-5">
+        <Col xs={24} lg={24}>
+          <Form.Item
+            name='address'
+            label="آدرس محل سکونت"
+          >
+            <Input.TextArea placeholder="آدرس محل سکونت" />
           </Form.Item>
         </Col>
       </Row>

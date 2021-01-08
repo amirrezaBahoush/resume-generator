@@ -20,11 +20,6 @@ function App() {
     setCurrent(current - 1)
   }
 
-  // const onChange = current => {
-  //   console.log('onChange:', current);
-  //   setCurrent(current)
-  // };
-
   const steps = [
     {
       title: 'مرحله ی اول',
@@ -41,28 +36,24 @@ function App() {
     {
       title: 'مرحله ی نهایی',
       content: <Skills />,
-    },
-    // {
-    //   title: 'مرحله نهایی',
-    //   content: 'Last-content',
-    // },
+    }
   ];
   return (
     <div className="resume__wrapper">
       <Row justify="center">
-        <Col xs={24} className="resume__titleWrapper">
+        <Col xs={24} className="resume__titleWrapper text-center">
           <Title level={1}>Welcome To Resume Generator</Title>
         </Col>
       </Row>
       <Row>
         <Col className="resume__steps" >
-          <Steps current={current} direction="vertical">
+          <Steps current={current} direction="vertical" responsive={true} onChange={setCurrent}>
             {steps.map(item => (
               <Step key={item.title} title={item.title} />
             ))}
           </Steps>
           <Form
-            // form={form}
+            layout="vertical"
             name="advanced_search"
             className="ant-advanced-search-form"
           // onFinish={onFinish}
@@ -74,19 +65,19 @@ function App() {
       <Row justify="center" className="resume__btnWrapper">
         <Col>
           <div className="steps-action">
-            {current < steps.length - 1 && (
-              <Button type="primary" onClick={() => next()}>
-                بعدی
+          {current > 0 && (
+              <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
+                قبلی
               </Button>
             )}
             {current === steps.length - 1 && (
-              <Button type="primary" onClick={() => message.success('Processing complete!')}>
+              <Button type="primary" onClick={() => message.success('پردازش با موفقیت به پایان رسید!')}>
                 خروجی PDF
               </Button>
             )}
-            {current > 0 && (
-              <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
-                قبلی
+              {current < steps.length - 1 && (
+              <Button type="primary" onClick={() => next()}>
+                بعدی
               </Button>
             )}
           </div>

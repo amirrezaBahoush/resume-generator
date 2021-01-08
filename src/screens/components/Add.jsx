@@ -32,7 +32,7 @@ const Add = (props) => {
         <Col xs={24}>
           {number !== 0 &&
             <Row className="mb-3 d-flex align-items-center">
-              <Col xs={12}>
+              <Col xs={24} lg={12}>
                 <FontAwesomeIcon
                   className="addBox-wrapper__icon addBox-wrapper__minus"
                   icon={faMinusCircle}
@@ -42,7 +42,7 @@ const Add = (props) => {
               <Col xs={12}></Col>
             </Row>}
           <Row gutter={24} className="mt-5">
-            <Col span={8}>
+            <Col xs={24} lg={8}>
               <Form.Item
                 name={`offceName-${number}`}
                 label="نام اداره"
@@ -56,21 +56,15 @@ const Add = (props) => {
                 <Input placeholder="نام اداره" />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xs={24} lg={8}>
               <Form.Item
                 name={`workLength-${number}`}
                 label="مدت حضور"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Input something!',
-                  },
-                ]}
               >
                 <Input placeholder="مدت حضور" />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xs={24} lg={8}>
               <Form.Item
                 name={`position-${number}`}
                 label="سمت شغلی"
@@ -84,7 +78,6 @@ const Add = (props) => {
                 <Input placeholder="سمت شغلی" />
               </Form.Item>
             </Col>
-
           </Row>
         </Col>
       </Row>
@@ -95,12 +88,12 @@ const Add = (props) => {
     <Row className="addBox-wrapper">
       <Col xs={24}>
         <Row className="mb-3 d-flex align-items-center">
-          <Col xs={12}>
+          <Col xs={24} lg={12}>
             {/* <h4 className="addBox-wrapper__title">
               پیوست فایل (ها)
             </h4> */}
           </Col>
-          <Col xs={12} className="d-flex justify-content-end">
+          <Col xs={24} lg={12} className="d-flex justify-content-end">
             <FontAwesomeIcon
               className="addBox-wrapper__icon"
               icon={faPlusCircle}

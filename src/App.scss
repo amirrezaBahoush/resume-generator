@@ -18,27 +18,34 @@
 
 body {
   background-color: #500000 !important;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  font-size: 14px;
 }
 
 .resume {
   &__wrapper {
   background-color: #500000;
   height: 100vh;
+  padding: 25px;
   }
   &__titleWrapper {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
     // padding: 20px;
-    margin-top: 25px;
     & *{
       color: #fff !important;
     }
   }
   &__steps {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    padding: 25px;
   }
   &__btnWrapper {
     display: flex;
@@ -74,6 +81,49 @@ body {
 .mt-5{
   margin-top: 25px;
 }
+.text-center{
+  text-align: center;
+}
  .ant-steps-item-title {
   color: #fff !important;
+}
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
+  background: #F45B69 !important;
+  border-color:#F45B69;
+}
+.ant-btn-primary{
+  background:#F45B69 !important;
+  border-color: #F45B69 !important;
+}
+.ant-steps-item-finish .ant-steps-item-icon{
+  border-color:#F45B69 !important;
+}
+.ant-steps-item-icon .anticon svg{
+  color: #F45B69 !important;
+}
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after{
+  background-color: #F45B69 !important;
+}
+@media only screen and (max-width: 768px) {
+  .resume {
+    &__wrapper {
+      height: 100%;
+      h1.ant-typography{
+        font-size: 17px;
+      }
+      }
+    &__steps {
+      display: block;
+      justify-content: space-between;
+    }
+    &__btnWrapper {
+      position: static;
+    }
+  }
+  .steps-content {
+    margin: 10px 0;
+    min-width: auto;
+    width: 100%;
+    max-height: 100%;
+}
 }

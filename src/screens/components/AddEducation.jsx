@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Row, Col, Input, Button } from "antd";
+import { Form, Row, Col, Input } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import './index.scss'
@@ -32,7 +32,7 @@ const AddEducation = (props) => {
         <Col xs={24}>
           {number !== 0 &&
             <Row className="mb-3 d-flex align-items-center">
-              <Col xs={12}>
+              <Col xs={24} lg={12}>
                 <FontAwesomeIcon
                   className="addBox-wrapper__icon addBox-wrapper__minus"
                   icon={faMinusCircle}
@@ -42,7 +42,7 @@ const AddEducation = (props) => {
               <Col xs={12}></Col>
             </Row>}
           <Row gutter={24} className="mt-5">
-            <Col span={8}>
+            <Col xs={24} lg={8}>
               <Form.Item
                 name={`educationPlace-${number}`}
                 label='محل تحصیل'
@@ -56,7 +56,7 @@ const AddEducation = (props) => {
                 <Input placeholder="محل تحصیل" />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xs={24} lg={8}>
               <Form.Item
                 label={`rank-${number}`}
                 label="مقطع تحصیلی"
@@ -70,7 +70,7 @@ const AddEducation = (props) => {
                 <Input placeholder="مقطع تحصیلی" />
               </Form.Item>
             </Col>
-            <Col span={8}>
+            <Col xs={24} lg={8}>
               <Form.Item
                 label={`educationLength-${number}`}
                 label="مدت تحصیل"
@@ -95,12 +95,12 @@ const AddEducation = (props) => {
     <Row className="addBox-wrapper">
       <Col xs={24}>
         <Row className="mb-3 d-flex align-items-center">
-          <Col xs={12}>
+          <Col xs={24} lg={12}>
             {/* <h4 className="addBox-wrapper__title">
               پیوست فایل (ها)
             </h4> */}
           </Col>
-          <Col xs={12} className="d-flex justify-content-end">
+          <Col xs={24} lg={12} className="d-flex justify-content-end">
             <FontAwesomeIcon
               className="addBox-wrapper__icon"
               icon={faPlusCircle}
